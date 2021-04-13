@@ -1,0 +1,4 @@
+/main/.vscode/
+/.vscode/*
+/old/*
+**/__pycache__/ 
