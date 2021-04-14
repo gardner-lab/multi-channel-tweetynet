@@ -23,6 +23,8 @@ To explore network performance with noisy audio we added gaussian noise to recor
 
 ## Results
 
+Our results validate previous reports from [[1]](#1). In addition, we demonstrate TweetyNet's sensitivity to input representation and the success of a multi-channel, "wideband" input. The later result comes with caveats discussed below. 
+
 <img src="https://github.com/lstrgar/tweetynet/blob/main/main/figs/accnoise.png">
 
 <img src="https://github.com/lstrgar/tweetynet/blob/main/main/figs/accnonoise.png">
@@ -66,4 +68,4 @@ Below we show a detailed schematic of the first convolution + max pooling layer 
 
 ___F___ and ___T___ correspond to the number of frequency and time bins in the channel containing the spectrogram with the greatest frequency resolution, which we will refer to as ***S***. ___D___ is the number of filters used for each channel. ___CK___ and ___PK___ correspond to the convolution and max-pooling kernel size (subscripted by ___W___ and ___H___ for height and width). 
 
-Simply put, we did not find a reliable boost in performance when processing multi-channel input; however, one of the multi-channel configurations we studied performed approximately as well as the best single-channel inputs. Directions for future research could involve rigorously evaluating the contribution from particular input channels in the multi-channel approach to determine whether a multi-channel approach carries utility for domains where the best FFT parameterization is not known apriori. 
+Simply put, we did not find a reliable boost in performance when processing multi-channel input; however, one of the multi-channel configurations we studied performed approximately as well as the best single-channel inputs. Directions for future research could involve rigorously evaluating the contribution from particular input channels in the multi-channel approach to determine whether a multi-channel approach carries utility for domains where the best FFT parameterization is not known apriori.
