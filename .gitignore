@@ -3,4 +3,4 @@
 /old/*
 **/__pycache__/ 
 /main/notebooks/
-/main/results/**
+/main/results/noisy/**
