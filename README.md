@@ -7,7 +7,7 @@ This repository contains a second implementation of **TweetyNet**, a convolution
 Our work extends the original project by (1) validating network performance in the face of significant noise and (2) supporting multi-channel input to the network where each channel is a spectrogram representing an identical audio sample but is constructed with varying time-frequency resolution. Since, in this implementation, the input channels can have different dimensions we modify Tweetynet's first layer to convolve and pool each channel to common size if necessary. Below is a diagramatic representation of TweetyNet sourced from the original publication. This diagram accurately represents the architecture of our implementation (less changes like input dimensions) when the network is processing typical (non multi-channel) input [[1]](#1).
 
 <br>
-<img src="https://github.com/lstrgar/tweetynet/blob/main/figs/tweetynet.jpg?raw=true" href="#">
+<img src="https://github.com/lstrgar/tweetynet/blob/main/master/figs/tweetynet.jpg?raw=true" href="#">
 <br>
 
 
