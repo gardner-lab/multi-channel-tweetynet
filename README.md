@@ -13,7 +13,7 @@ Our work extends the original project by (1) validating network performance in t
 
 ## Dataset
 
-Tweetynet is fully supervised the network that learns from labelled training data. In our experiments we exclusively relied on a publically available, labeled dataset of Bengalese Finch song [[2]](#2). To support usage of TweetyNet we also provide supporting software to generate spectrograms and corresponding labels. The utilities for generating spectrograms are easily applied to novel audio datasets by making simple modifications subject to the encoding of the source audio. Similarly, the software can be extended to support generating labels from novel annotation schemas. 
+Tweetynet is a fully supervised the network that learns from labelled training data. In our experiments we exclusively relied on a publically available, labeled dataset of Bengalese Finch song [[2]](#2). To support usage of Multi-TweetyNet we also provide software to generate spectrograms and corresponding labels. The utilities for generating spectrograms are easily applied to novel audio datasets by making simple modifications, subject to the encoding of the source audio. Similarly, the software can be easily modified to support generating labels from novel annotation schemas. 
 
 To explore network performance with noisy audio we added gaussian noise to recordings from the aforementioned dataset. Images below offer an example of a noiseless and noisy spectrogram of 1 second of recorded song.
 <img src="https://github.com/lstrgar/tweetynet/blob/main/main/figs/spectnonoise.png?raw=true" width=1000px height=400px>
