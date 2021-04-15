@@ -33,13 +33,15 @@ Our results validate previous reports from [[1]](#1). In addition, we demonstrat
 
 ## Usage
 
-To get started, clone this repository. ```/env/environment.yaml``` is a file specifying a conda environment containing all dependencies. There are five fundamental pieces of source code found in ```main/src/``` and corresponding parameter specifications found in ```main/parameters/```. Broadly speaking, the workflow to use this software from scratch is as follows:
+To get started, clone this repository. ```/env/tweetynet.yaml``` is a file specifying a conda environment containing all dependencies. There are five fundamental pieces of source code found in ```main/src/``` and corresponding parameter specifications found in ```main/parameters/```. Broadly speaking, the workflow to use this software from scratch is as follows:
 
-1. Specify global parameters in ```/main/parameters/params.py```
-2. Parameterize ```/main/src/spect_writer.py``` via ```/main/parameters/spect_writer_params.py``` in order to generate spectrograms
-3. Parameterize ```/main/src/labelvec_writer.py``` via ```/main/parameters/labelvec_writer_params.py``` in order to generate labels
-4. Tune the network architecture via ```/main/parameters/network_params.py```
-5. Train the network. For this see ```/main/train.ipynb```. 
+1. Collect the dataset from [[2]](#2)
+2. Install and activate the virtual environment. This can be done with ```conda env create -f tweetynet.yml``` You will need to install anaconda or miniconda if you have not yet. 
+3. Specify global parameters in ```/main/parameters/params.py```
+4. Parameterize ```/main/src/spect_writer.py``` via ```/main/parameters/spect_writer_params.py``` in order to generate spectrograms
+5. Parameterize ```/main/src/labelvec_writer.py``` via ```/main/parameters/labelvec_writer_params.py``` in order to generate labels
+6. Tune the network architecture via ```/main/parameters/network_params.py```
+7. Train the network. 
 
 For demo detailing the full work flow described above see the python notebook ```/main/demo.ipynb```.
 
