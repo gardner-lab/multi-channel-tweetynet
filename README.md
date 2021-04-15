@@ -43,7 +43,7 @@ To get started, clone this repository. ```/env/tweetynet.yaml``` is a file speci
 6. Tune the network architecture via ```/main/parameters/network_params.py```
 7. Train the network. 
 
-For demo detailing the full work flow described above see the python notebook ```/main/demo.ipynb```.
+**For a demo detailing the full work flow described above see the python notebook ```/main/demo.ipynb```.**
 
 <br>
 
