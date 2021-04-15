@@ -33,17 +33,19 @@ Our results validate previous reports from [[1]](#1). In addition, we demonstrat
 
 ## Usage
 
-To get started, clone this repository. ```/env/tweetynet.yaml``` is a file specifying a conda environment containing all dependencies. There are five fundamental pieces of source code found in ```main/src/``` and corresponding parameter specifications found in ```main/parameters/```. Broadly speaking, the workflow to use this software from scratch is as follows:
+To get started, clone this repository. There are five fundamental pieces of source code found in ```main/src/``` and corresponding parameter specifications found in ```main/parameters/```. Broadly speaking, the workflow to use this software from scratch is as follows:
 
 1. Collect the dataset from [[2]](#2)
-2. Install and activate the virtual environment. This can be done with ```conda env create -f tweetynet.yml``` You will need to install anaconda or miniconda if you have not yet. 
+2. Install dependencies. We recommend a conda based virtual environment. From `pip` you will need the following: `evfuncs`. From `conda` you will need `pytorch`, `torchvision`,. If you are working on a machine with CUDA you will need to install additional software to properly leverage your compute.
 3. Specify global parameters in ```/main/parameters/params.py```
 4. Parameterize ```/main/src/spect_writer.py``` via ```/main/parameters/spect_writer_params.py``` in order to generate spectrograms
 5. Parameterize ```/main/src/labelvec_writer.py``` via ```/main/parameters/labelvec_writer_params.py``` in order to generate labels
 6. Tune the network architecture via ```/main/parameters/network_params.py```
 7. Train the network. 
 
-**For a demo detailing the full work flow described above see the python notebook ```/main/demo.ipynb```.**
+We have had success installing and running the software on MacOS Big Sur (Intel) and Ubuntu 18.04.
+
+**For a demo detailing the full work flow described above see the notebook ```/main/demo.ipynb```.**
 
 <br>
 
