@@ -33,7 +33,7 @@ Our results validate previous reports from [[1]](#1). In addition, we demonstrat
 
 ## Usage
 
-To get started, clone this repository. There are five fundamental pieces of source code found in ```main/src/``` and corresponding parameter specifications found in ```main/parameters/```. Broadly speaking, the workflow to use this software from scratch is as follows:
+To get started, clone this repository. There are five fundamental pieces of source code found in ```main/src/``` and corresponding parameter specifications found in ```main/parameters/```. **If possible, we highly recommend training the network on a CUDA enabled machine**. Broadly speaking, the workflow to use this software from scratch is as follows:
 
 1. Collect the dataset from [[2]](#2)
 2. Install dependencies. We recommend a conda based virtual environment. From `pip` you will need the following: `evfuncs`. From `conda` you will need `pytorch` and `torchvision`. If you are working on a machine with CUDA you will need to install additional software to properly leverage your compute.
