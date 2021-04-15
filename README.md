@@ -36,7 +36,7 @@ Our results validate previous reports from [[1]](#1). In addition, we demonstrat
 To get started, clone this repository. ```/env/environment.yaml``` is a file specifying a conda environment containing all dependencies. There are five fundamental pieces of source code found in ```main/src/``` and corresponding parameter specifications found in ```main/parameters/```. Broadly speaking, the workflow to use this software from scratch is as follows:
 
 1. Collect the dataset from [[2]](#2)
-2. Install and activate the virtual environment 
+2. Install and activate the virtual environment. This can be done with ```conda env create -f environment.yml``` You will need to install anaconda or miniconda if you have not yet. 
 3. Specify global parameters in ```/main/parameters/params.py```
 4. Parameterize ```/main/src/spect_writer.py``` via ```/main/parameters/spect_writer_params.py``` in order to generate spectrograms
 5. Parameterize ```/main/src/labelvec_writer.py``` via ```/main/parameters/labelvec_writer_params.py``` in order to generate labels
