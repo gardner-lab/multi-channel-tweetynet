@@ -23,7 +23,7 @@ To explore network performance with noisy audio we added gaussian noise to recor
 
 ## Results
 
-Our results validate previous reports from [[1]](#1). In addition, we demonstrate TweetyNet's sensitivity to input representation and the success of a multi-channel, "wideband" input. The later result comes with caveats discussed below. 
+Our results validate previous reports from [[1]](#1). In addition, we demonstrate TweetyNet's sensitivity to input representation (particularly in the presence of noise) and the success of a multi-channel, "wideband" input. The later result comes with caveats discussed below. 
 
 <img src="https://github.com/gardner-lab/multi-channel-tweetynet/blob/master/figs/accnoise.png">
 
