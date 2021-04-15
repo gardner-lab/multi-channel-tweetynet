@@ -23,7 +23,7 @@ To explore network performance with noisy audio we added gaussian noise to recor
 
 ## Results
 
-Our results validate previous reports from [[1]](#1). In addition, we demonstrate TweetyNet's sensitivity to input representation (particularly in the presence of noise) and the success of a multi-channel, "wideband" input. The later result comes with caveats discussed below. 
+Our results validate previous reports from [[1]](#1). In addition, we demonstrate TweetyNet's sensitivity to input representation (particularly in the presence of noise) and the success of a multi-channel, "wideband" input. The later result comes with caveats discussed below. In the figures shown below the legend labels indicate the FFT size used to construct inputs to the network. The labels "Wideband" and "Extreme-Wideband" correspond to networks processing multi-channel inputs, each composed of input representations derived from FFT sizes of 256, 512, 1024 and 64, 128, 256, 512, 1024, 2048, 4096, respectively.
 
 <img src="https://github.com/gardner-lab/multi-channel-tweetynet/blob/master/figs/accnoise.png">
 
