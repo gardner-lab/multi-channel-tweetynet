@@ -1,3 +1,5 @@
+# NOTE: You likely will not need to edit this file
+
 """LabelVecWriter Class Parameters"""
 
 from parameters.params import (

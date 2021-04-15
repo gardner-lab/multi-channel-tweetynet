@@ -32,19 +32,20 @@ SNR = 1
 # To increase the number of training samples we can duplicate
 # windows and add unique noise to each copy. Only applies if
 # snr is not set to -1
-NUM_WINDOW_COPIES = 1
+NUM_WINDOW_COPIES = -1
 
-# We extract spectrogram windows for training with a sliding window.
+# We extract audio windows (transformed into sonogram) for training with a sliding window.
 # Here we set the duration of the sliding window overlap relative
-# to the duration of the window itself.
+# to the duration of the window itself, which by default is 1 second.
 WINDOW_STRIDE_DUR = 0.03 * WINDOW_DUR
 
 # Here we refer to the number of audio samples in the window stride
+# Do not edit this quantity.
 NUM_SAMPLES_IN_STRIDE = int(SAMP_FREQ * WINDOW_STRIDE_DUR)
 
 # Number of samples in a window must be divisible by stft hop
 # length parameter in order to cleanly hit our spectrogram channel
-# sizes as multiples of two.
+# sizes as multiples of two. Do not edit this quantity.
 NUM_SAMPLES_IN_WINDOW = int(SAMP_FREQ * WINDOW_DUR) + (
     max(STFT_HOP_LENS) - (int(SAMP_FREQ * WINDOW_DUR) % max(STFT_HOP_LENS))
 )

@@ -1,3 +1,7 @@
+# NOTE: You likely will not need to edit this file
+
+"""TrainDataset and EvalDataset Class Parameters"""
+
 from parameters.params import (
     WINDOWED_SPECTS_DIR_PATH,
     WINDOWED_LABELVECS_DIR_PATH,

@@ -2,15 +2,13 @@
 from src.utilities import get_labelset
 
 # SPECIFY PATH TO AUDIO FILES
-AUDIO_DIR_PATH = "/home/luke/work/data/tweetynet/bengalese_finch/audio/onebird/032212/"
+AUDIO_DIR_PATH = ""
 
 # SPECIFY PATH TO ANNOTATION FILES
-ANNOT_DIR_PATH = AUDIO_DIR_PATH
+ANNOT_DIR_PATH = ""
 
 # SPECIFY TARGET DIRECTORY FOR GENERATED SPECTROGRAMS
-SPECT_DIR_PATH = (
-    "/home/luke/work/data/tweetynet/bengalese_finch/spects/onebird/032212/nonoise/"
-)
+SPECT_DIR_PATH = ""
 
 # SPECIFY SUBDIRECTORIES FOR SPECTROGRAM WINDOWS AND WINDOW LABELVECTORS
 WINDOWED_SPECTS_DIR_PATH = SPECT_DIR_PATH + "windowed/"
@@ -27,17 +25,19 @@ UNCUT_LABELVECS_DIR_PATH = UNCUT_SPECTS_DIR_PATH + "labs/"
 #   https://github.com/NickleDave/evfuncs
 AUDIO_FILE_FMT = ".cbin"
 ANNOT_FILE_FMT = ".cbin.not.mat"
+
+# Provide desired file suffix for labelvectors
 LABELVEC_FILE_FMT = ".labvec"
 
-# Provide desired file ending for spectrograms
+# Provide desired file suffix for spectrograms
 SPECT_FILE_FMT = ".spect"
 
 # Audio recording specific sampling frequency
 SAMP_FREQ = 32000
 
-DEVICE = "cuda:1"
+DEVICE = "cuda"
 
-# Window duration in seconds
+# Duration of windows processed by the network (in seconds)
 WINDOW_DUR = 1
 
 # Label for silence
