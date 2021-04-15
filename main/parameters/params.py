@@ -2,13 +2,13 @@
 from src.utilities import get_labelset
 
 # SPECIFY PATH TO AUDIO FILES
-AUDIO_DIR_PATH = ""
+AUDIO_DIR_PATH = "/Users/luke/Desktop/032212/"
 
 # SPECIFY PATH TO ANNOTATION FILES
-ANNOT_DIR_PATH = ""
+ANNOT_DIR_PATH = "/Users/luke/Desktop/032212/"
 
 # SPECIFY TARGET DIRECTORY FOR GENERATED SPECTROGRAMS
-SPECT_DIR_PATH = ""
+SPECT_DIR_PATH = "/Users/luke/Desktop/outdata/"
 
 # SPECIFY SUBDIRECTORIES FOR SPECTROGRAM WINDOWS AND WINDOW LABELVECTORS
 WINDOWED_SPECTS_DIR_PATH = SPECT_DIR_PATH + "windowed/"
@@ -35,7 +35,7 @@ SPECT_FILE_FMT = ".spect"
 # Audio recording specific sampling frequency
 SAMP_FREQ = 32000
 
-DEVICE = "cuda"
+DEVICE = "cpu"
 
 # Duration of windows processed by the network (in seconds)
 WINDOW_DUR = 1

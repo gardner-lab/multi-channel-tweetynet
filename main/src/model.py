@@ -3,11 +3,12 @@ import torch
 
 class TweetynetModel:
     def __init__(
-        self, device,
+        self,
+        device,
     ):
         self.device = device
         self.global_step = 0
-        self.loss_func = torch.nn.CrossEntropyLoss().cuda(device)
+        self.loss_func = torch.nn.CrossEntropyLoss().to(device)
 
     def run(self, train_data, eval_data, net, num_epochs, eval_step, lr):
         optimizer = torch.optim.Adam(params=net.parameters(), lr=lr)
@@ -36,11 +37,11 @@ class TweetynetModel:
             for batch in train_data:
                 x, y = (
                     batch[0],
-                    batch[1].cuda(self.device, non_blocking=True),
+                    batch[1].to(self.device, non_blocking=True),
                 )
                 for nfft, spec in x.items():
                     size = spec.size()
-                    x[nfft] = spec.view(size[0], 1, size[1], size[2]).cuda(
+                    x[nfft] = spec.view(size[0], 1, size[1], size[2]).to(
                         self.device, non_blocking=True
                     )
 
@@ -58,12 +59,12 @@ class TweetynetModel:
                     accs.append(eval_acc)
                     net.train()
 
-            update = f"""
-            Number Training Samples: {self.global_step}
-            Eval Accuracy: {eval_acc}
-            \n
-            """
-            print(update)
+                    update = f"""
+                    Number Training Samples: {self.global_step}
+                    Eval Accuracy: {eval_acc}
+                    \n
+                    """
+                    print(update)
 
         return accs, num_samps
 

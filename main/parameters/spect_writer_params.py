@@ -16,9 +16,9 @@ from parameters.params import (
 # to identical dimensions the window length must equal
 # the fft size and the hop lengths must remain relative
 # multiples of 2.
-STFT_N_FFTS = [64, 128, 256, 512, 1024, 2048, 4096]
-STFT_WIN_LENS = [64, 128, 256, 512, 1024, 2048, 4096]
-STFT_HOP_LENS = [4, 8, 16, 32, 64, 128, 256]
+STFT_N_FFTS = [256, 512, 1024]
+STFT_WIN_LENS = [256, 512, 1024]
+STFT_HOP_LENS = [16, 32, 64]
 
 # Drop signal below and above specified frequency cutoffs
 FREQ_CUTOFFS = [500, 10000]
