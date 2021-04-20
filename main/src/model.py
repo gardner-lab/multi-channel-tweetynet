@@ -52,11 +52,11 @@ class TweetynetModel:
                 optim.step()
 
                 self.global_step += train_data.batch_size
-                num_samps.append(self.global_step)
 
                 if self.global_step % eval_step == 0:
                     eval_acc = self.eval(net, eval_data)
                     accs.append(eval_acc)
+                    num_samps.append(self.global_step)
                     net.train()
 
                     update = f"""

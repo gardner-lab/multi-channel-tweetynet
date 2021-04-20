@@ -4,7 +4,7 @@ from parameters.params import DEVICE
 
 
 # Network converges quickly
-NUM_EPOCHS = 3
+NUM_EPOCHS = 2
 
 
 # Small batch size tends to work well
@@ -29,4 +29,4 @@ LR = 0.001
 
 
 # Number of new instantiations of network to run
-NUM_RUNS = 10
+NUM_RUNS = 1

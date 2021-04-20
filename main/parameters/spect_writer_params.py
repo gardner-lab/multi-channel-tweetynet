@@ -18,7 +18,7 @@ from parameters.params import (
 # multiples of 2.
 STFT_N_FFTS = [256, 512, 1024]
 STFT_WIN_LENS = [256, 512, 1024]
-STFT_HOP_LENS = [16, 32, 64]
+STFT_HOP_LENS = [32, 64, 128]
 
 # Drop signal below and above specified frequency cutoffs
 FREQ_CUTOFFS = [500, 10000]

@@ -19,17 +19,17 @@ NETWORK_PARAMS = {
     "conv2_kernel_size": (3, 3),
     "conv2_stride_len": (1, 1),
     "conv2_pad_same": True,
-    "pool2_kernel_size": (2, 1),
-    "pool2_stride_len": (2, 1),
+    "pool2_kernel_size": (8, 1),
+    "pool2_stride_len": (8, 1),
     "pool2_pad_same": False,
 }
 
 # Specify the spectral "channels" the network will process in sorted order
 # Ensure that you have in fact generated spectrograms for all the FFT sizes provided below
-N_FFTS = [256, 512, 1024]
+N_FFTS = [512]
 
 # This must be a multiple of the number of input channels (i.e. len(N_FFTS))
-NUM_CONV1_FILTERS = 42
+NUM_CONV1_FILTERS = 32
 
 # NOTE: for any selection of 'n_ffts' it makes sense that the kernel sizes are
 # 2x multiples of one another relative to the factor relationship between the fft
@@ -40,9 +40,9 @@ NUM_CONV1_FILTERS = 42
 CONV1_KERNEL_SIZES = {
     #64: (2, 64),
     #128: (4, 32),
-    256: (4, 4),
-    512: (8, 2),
-    1024: (16, 1),
+    256: (4, 8),
+    512: (8, 4),
+    1024: (16, 2),
     #2048: (64, 2),
     #4096: (128, 1),
 }
@@ -62,9 +62,9 @@ CONV1_STRIDE_LENS = {
 POOL1_KERNEL_SIZES = {
     #64: (2, 64),
     #128: (4, 32),
-    256: (4, 4),
-    512: (8, 2),
-    1024: (16, 1),
+    256: (4, 8),
+    512: (8, 4),
+    1024: (16, 2),
     #2048: (64, 2),
     #4096: (128, 1),
 }
@@ -72,9 +72,9 @@ POOL1_KERNEL_SIZES = {
 POOL1_STRIDE_LENS = {
     #64: (2, 64),
     #128: (4, 32),
-    256: (4, 4),
-    512: (8, 2),
-    1024: (16, 1),
+    256: (4, 8),
+    512: (8, 4),
+    1024: (16, 2),
     #2048: (64, 2),
     #4096: (128, 1),
 }
