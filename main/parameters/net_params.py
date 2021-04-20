@@ -26,7 +26,7 @@ NETWORK_PARAMS = {
 
 # Specify the spectral "channels" the network will process in sorted order
 # Ensure that you have in fact generated spectrograms for all the FFT sizes provided below
-N_FFTS = [256, 512, 1024]
+N_FFTS = [64, 128, 256, 512, 1024, 2048, 4096]
 
 # This must be a multiple of the number of input channels (i.e. len(N_FFTS))
 NUM_CONV1_FILTERS = 42
