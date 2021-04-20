@@ -29,4 +29,4 @@ LR = 0.001
 
 
 # Number of new instantiations of network to run
-NUM_RUNS = 40
+NUM_RUNS = 10

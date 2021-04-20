@@ -26,7 +26,7 @@ NETWORK_PARAMS = {
 
 # Specify the spectral "channels" the network will process in sorted order
 # Ensure that you have in fact generated spectrograms for all the FFT sizes provided below
-N_FFTS = [64, 128, 256, 512, 1024, 2048, 4096]
+N_FFTS = [256, 512, 1024]
 
 # This must be a multiple of the number of input channels (i.e. len(N_FFTS))
 NUM_CONV1_FILTERS = 42
@@ -34,46 +34,49 @@ NUM_CONV1_FILTERS = 42
 # NOTE: for any selection of 'n_ffts' it makes sense that the kernel sizes are
 # 2x multiples of one another relative to the factor relationship between the fft
 # parameters themselves. The same rule applies for pool1 parameters specified below.
+# NOTE: having observed poor performance we comment out parameter sets for FFT sizes
+# 64, 128, 2048, and 4096. Including them at all is a reminder that this software can 
+# accomodate different FFT sizes provided a proper parameterization. 
 CONV1_KERNEL_SIZES = {
-    64: (2, 64),
-    128: (4, 32),
-    256: (8, 16),
-    512: (16, 8),
-    1024: (32, 4),
-    2048: (64, 2),
-    4096: (128, 1),
+    #64: (2, 64),
+    #128: (4, 32),
+    256: (4, 4),
+    512: (8, 2),
+    1024: (16, 1),
+    #2048: (64, 2),
+    #4096: (128, 1),
 }
 
 # NOTE: typically we do not extend the first convolution's stride to reserve
 # downsampling for the subsequent pooling operations
 CONV1_STRIDE_LENS = {
-    64: (1, 1),
-    128: (1, 1),
+    #64: (1, 1),
+    #128: (1, 1),
     256: (1, 1),
     512: (1, 1),
     1024: (1, 1),
-    2048: (1, 1),
-    4096: (1, 1),
+    #2048: (1, 1),
+    #4096: (1, 1),
 }
 
 POOL1_KERNEL_SIZES = {
-    64: (2, 64),
-    128: (4, 32),
-    256: (8, 16),
-    512: (16, 8),
-    1024: (32, 4),
-    2048: (64, 2),
-    4096: (128, 1),
+    #64: (2, 64),
+    #128: (4, 32),
+    256: (4, 4),
+    512: (8, 2),
+    1024: (16, 1),
+    #2048: (64, 2),
+    #4096: (128, 1),
 }
 
 POOL1_STRIDE_LENS = {
-    64: (2, 64),
-    128: (4, 32),
-    256: (8, 16),
-    512: (16, 8),
-    1024: (32, 4),
-    2048: (64, 2),
-    4096: (128, 1),
+    #64: (2, 64),
+    #128: (4, 32),
+    256: (4, 4),
+    512: (8, 2),
+    1024: (16, 1),
+    #2048: (64, 2),
+    #4096: (128, 1),
 }
 
 # Programatically fill missing entries in NETWORK_PARAMS subject to
