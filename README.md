@@ -36,7 +36,7 @@ Our results validate previous reports from [[1]](#1). In addition, we demonstrat
 To get started, clone this repository. There are five fundamental pieces of source code found in ```main/src/``` and corresponding parameter specifications found in ```main/parameters/```. **If possible, we highly recommend training the network on a CUDA enabled machine**. Broadly speaking, the workflow to use this software from scratch is as follows:
 
 1. Collect the dataset from [[2]](#2)
-2. Install dependencies. We recommend a conda based virtual environment. From `pip` you will need the following: `evfuncs`. From `conda` you will need `pytorch` and `torchvision`. If you are working on a machine with CUDA you will need to install additional software to properly leverage your compute. For the provided `demo.ipynb` you will need `matplotlib` installed as well. 
+2. Install dependencies. We recommend a conda based virtual environment. From `pip` you will need the following: `evfuncs`. From `conda` you will need `pytorch (last working test with v3.9.0)` and `torchvision`. If you are working on a machine with CUDA you will need to install additional software to properly leverage your compute. For the provided `demo.ipynb` you will need `matplotlib` installed. You may also need to install ```ipykernel```.
 3. Specify global parameters in ```/main/parameters/params.py```
 4. Parameterize ```/main/src/spect_writer.py``` via ```/main/parameters/spect_writer_params.py``` in order to generate spectrograms
 5. Parameterize ```/main/src/labelvec_writer.py``` via ```/main/parameters/labelvec_writer_params.py``` in order to generate labels
